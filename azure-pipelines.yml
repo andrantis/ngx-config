@@ -20,4 +20,6 @@ steps:
     npm install
     ng build --prod
     ls
+    cd dist
+    ls
   displayName: 'npm install and build'
