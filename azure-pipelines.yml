@@ -19,7 +19,5 @@ steps:
     npm install -g @angular/cli
     npm install
     ng build --prod
-    ls
-    cd dist
-    ls
+    cd dist && list
   displayName: 'npm install and build'
