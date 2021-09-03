@@ -23,7 +23,7 @@ steps:
   displayName: 'npm install and build'
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)/dist/ngx-config/'
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/ngx-config/dist/ngx-config/'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
