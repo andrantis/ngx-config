@@ -23,6 +23,6 @@ steps:
   displayName: 'npm install and build'
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)/dist/'
+    targetPath: '$(Build.ArtifactStagingDirectory)/dist/'
     artifact: 'drop'
     publishLocation: 'pipeline'
