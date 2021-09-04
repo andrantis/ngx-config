@@ -23,6 +23,6 @@ steps:
   displayName: 'npm install and build'
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)/dist/'
+    targetPath: '$(System.DefaultWorkingDirectory)/dist/ngx-config/'
     artifact: 'drop'
     publishLocation: 'pipeline'
