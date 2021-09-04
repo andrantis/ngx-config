@@ -21,8 +21,8 @@ steps:
     ng build --prod
     pwd && cd dist && ls && cd ngx-config && ls
   displayName: 'npm install and build'
-- task: PublishBuildArtifacts@1
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    targetPath: '$(Pipeline.Workspace)/dist'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
